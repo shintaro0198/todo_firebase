@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>todoアプリケーション</title>
+</head>
+<body>
+  <header>
+    <h2 class="header-left">ToDo</h2>
+    <div class="header-right">
+      <p><a href="signup.html">Sign up</a></p>
+      <p><a href="login.html">Log in</a></p>
+    </div>
+  </header>
+  <main>
+    <div class="add">
+      <input type="text"  id="text" class="add-text">
+      <div id="button" class="button">追加</div>
+    </div>
+    <div id="list" class="list"></div>
+  </main>
+  <script type="module" src="../js/firebase.js"></script>
+  <script type="module" src="../js/index.js"></script>
+  <!-- <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+    import { getDatabase, ref, child, get , push , update} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCl1a4JkwaX26ZzpfabVMgBEisGQhg0-Ww",
+        authDomain: "todo-app-76683.firebaseapp.com",
+        databaseURL: "https://todo-app-76683-default-rtdb.firebaseio.com",
+        projectId: "todo-app-76683",
+        storageBucket: "todo-app-76683.appspot.com",
+        messagingSenderId: "542274110311",
+        appId: "1:542274110311:web:16e19deaefdc2df720a5c2"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      // Initialize Realtime Database and get a reference to the service
+      const db = getDatabase(app);
+      const auth = getAuth(app);
+      const dbRef = ref(getDatabase());
+      const text = document.getElementById('text');
+      const btn = document.getElementById('button');
+      const list = document.getElementById('list');
+      get(child(dbRef, `users/user1/posts/`)).then((snapshot) => {
+          if (snapshot.exists()) {
+            let posts = snapshot.val();
+            for ( let post in posts) {
+              let newText = document.createElement('p');
+              newText.innerHTML = posts[post];
+              console.log(newText);
+              list.appendChild(newText);
+            }
+            aaaaaa
+            console.log("No data available");
+          }
+        }).catch((error) => {
+          console.error(error);
+        });
+      btn.addEventListener('click', () => {
+        // Get a key for a new Post.
+        const newPostKey = push(child(ref(db), 'posts')).key;
+        console.log(newPostKey);
+        const postData = text.value;
+        // Write the new post's data simultaneously in the posts list and the user's post list.
+        const updates = {};
+        updates['users/user1/posts/' + newPostKey] = postData;
+        update(ref(db), updates);
+        text.value = "";
+      })
+  </script> -->
+  <script>
+    
+    // btn.addEventListener('click', () => {
+    //   let newContent = document.createElement('div');
+    //   let newText = document.createElement('p');
+    //   let eraseButton = document.createElement('span');
+    //   newText.innerHTML = text.value;
+    //   eraseButton.innerHTML = '✖';
+    //   newContent.style.display = 'flex';
+    //   newText.style.width = '80%'
+    //   newContent.appendChild(newText);
+    //   newContent.appendChild(eraseButton);
+    //   list.appendChild(newContent);
+    //   text.value = "";
+    // })
+  </script>
+</body>
+</html>

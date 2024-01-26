@@ -1,0 +1,25 @@
+header {
+  height: 60px;
+  margin-bottom: 50px;
+  background: navajowhite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-left {
+  margin-left: 30px;
+}
+
+.header-right {
+  display: flex;
+}
+
+.header-right p {
+  margin-right: 30px;
+}

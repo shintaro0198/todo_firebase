@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/signup.css">
+  <title>Sign up</title>
+</head>
+<body>
+  <header>
+    <h2 class="header-left">ToDo</h2>
+    <div class="header-right">
+      <p><a href="signup.html">Sign up</a></p>
+      <p><a href="login.html">Log in</a></p>
+    </div>
+  </header>
+  <main>
+    <div class="content">
+      <p>mail-adress : </p>
+      <input type="email" id="email">
+    </div>
+    <div class="content">
+      <p>password : </p>
+      <input type="password" id="password">
+    </div>
+    <div class="button" id="button">
+      Sign Up
+    </div>
+  </main>
+  <script type="module" src="../js/firebase.js"></script>
+  <script type="module" src="../js/signup.js"></script>
+</body>
+</html>

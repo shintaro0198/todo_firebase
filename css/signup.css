@@ -1,0 +1,25 @@
+main {
+  width: 70%;
+  margin: auto;
+}
+/**____________________________________________________**/
+.content {
+  display: flex;
+  margin: 0 auto 30px;
+  width: 500px;
+}
+.content p {
+  width: 150px;
+}
+.content input {
+  width: 350px;
+}
+.button {
+  margin: auto;
+  padding: 1px 2px;
+  height: 46px;
+  line-height: 46px;
+  width: 100px;
+  border: 1px solid black;
+  text-align: center;
+}
